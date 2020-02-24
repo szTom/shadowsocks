@@ -1,0 +1,10 @@
+[Unit]
+Description=Shadowsocks Server
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/ssserver -p 1060 -k f16f52c7d -m aes-256-cfb
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
